@@ -1,0 +1,36 @@
+## App
+
+Decidir formulario a mostrar
+ENVIAR datos a cada Form
+RECIBIR datos de los Inputs de User (FormData)
+Calcular y ENVIAR edad tras input de fecha
+ENVIAR Datos de estado a cada botón (tanto de la NavBar como del FormLogIn)
+Guardar (+ RECIBIR/ENVIAR) el userName y el password del usuario (del FormAccess)
+Comprobar (+ RECIBIR/ENVIAR) el userName y el password del usuario (del FormLogIn).
+ENVIAR estado del mensaje de error del FormLogIn
+ENVIAR datos de estado a cada botón a cada boton del NavBar
+
+## NavBar
+
+RENDERIZAR botones
+RECIBIR datos de estado de cada botón
+
+## FormData
+
+RENDERIZAR cada Input: 4
+RECIBIR 
+
+## FormAccess
+
+RENDERIZAR cada Input: 3
+
+# FormLogIn
+
+RENDERIZAR botón, checkbox y 2 inputs
+ENVIAR datos estado botón
+RECIBIR función para cuando se haga click en su botón
+
+## ResultsScreen
+
+RECIBIR estado de comprobación de userName/password 
+RENDERIZAR datos que le llegan 
