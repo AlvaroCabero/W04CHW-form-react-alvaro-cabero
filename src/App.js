@@ -18,8 +18,21 @@ function App() {
   //     passWord: "",
   //   },
   // ]);
-  const [page, setPage] = useState(2);
+  const [page, setPage] = useState(0);
 
+  const nextPage = () => {
+    if (page < 2) {
+      setPage(page + 1);
+      console.log(page);
+    }
+  };
+
+  const prevPage = () => {
+    if (page > 0) {
+      setPage(page - 1);
+      console.log(page);
+    }
+  };
   // const addUser = (user, users) => {
   //   if (!users.find((userSearch) => userSearch.mail === user.mail)) {
   //     setUsers([...users, user]);
@@ -32,7 +45,7 @@ function App() {
   return (
     <>
       {/* <userContext.Provider value={{ addUser }}></WordsContext.Provider> */}
-      <NavBar />
+      <NavBar page={page} nextPage={nextPage} prevPage={prevPage} />
       {/* <form
         className="form-initial"
         autoComplete="off"
