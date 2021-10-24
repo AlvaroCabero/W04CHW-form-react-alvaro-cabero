@@ -1,21 +1,21 @@
 //import { useState } from "react";
 //import "./FormCreate.css";
 
- const FormAccess = ({ onSubmit }) => {
-  const initialData = {
-    name: "",
-    picture: "",
-    alternativeText: "",
-    profession: "",
-    status: "",
-    twitter: "",
+const FormLogin = () => {
+  // const initialData = {
+  //   name: "",
+  //   picture: "",
+  //   alternativeText: "",
+  //   profession: "",
+  //   status: "",
+  //   twitter: "",
 
-    return(
-      <>
+  return (
+    <>
       <form>
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
-            Email address
+            UserLOGIN
           </label>
           <input
             type="email"
@@ -24,7 +24,7 @@
             aria-describedby="emailHelp"
           ></input>
           <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
+            Introduce your userName
           </div>
         </div>
         <div className="mb-3">
@@ -51,7 +51,7 @@
           Submit
         </button>
       </form>
-      </>);
-
-  };
-  export default FormLogin;
+    </>
+  );
+};
+export default FormLogin;
