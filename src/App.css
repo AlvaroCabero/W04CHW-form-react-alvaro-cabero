@@ -5,6 +5,18 @@
   justify-content: flex-start;
   align-items: center;
 }
-.nav-bar__button1 {
+.nav-bar__button1,
+.nav-bar__button2 {
   margin-right: 10px;
+}
+.active {
+  cursor: pointer;
+  opacity: 1;
+}
+.off {
+  visibility: hidden;
+}
+.nav-bar__text {
+  margin-left: 125px;
+  margin-top: 12px;
 }

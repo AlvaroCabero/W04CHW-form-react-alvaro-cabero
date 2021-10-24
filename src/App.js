@@ -19,6 +19,17 @@ function App() {
   //   },
   // ]);
   const [page, setPage] = useState(0);
+  // const [buttonState, setButtonState] = useState([0,1]);
+
+  // if (page === 0){
+  //   setButtonState([0,1]);
+  // }
+  //   if (page === 1){
+  //   setButtonState([0,1]);
+  // }
+  //   if (page === 2){
+  //   setButtonState([0,1]);
+  // }
 
   const nextPage = () => {
     if (page < 2) {
@@ -33,6 +44,7 @@ function App() {
       console.log(page);
     }
   };
+
   // const addUser = (user, users) => {
   //   if (!users.find((userSearch) => userSearch.mail === user.mail)) {
   //     setUsers([...users, user]);
