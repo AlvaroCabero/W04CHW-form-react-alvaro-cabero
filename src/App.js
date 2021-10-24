@@ -1,27 +1,29 @@
 import { useState } from "react";
 import "./App.css";
+import FormData from "./components/FormData/FormData";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
-  const [users, setUsers] = useState([
-    {
-      id: 1,
-      name: "",
-      lastName: "",
-      birthdate: "",
-      age: "",
-      mail: "",
-      usersName: "",
-      passWord: "",
-    },
-  ]);
-  const [page, setPage] = useState(0);
+  // const [users, setUsers] = useState([
+  //   {
+  //     id: 1,
+  //     name: "",
+  //     lastName: "",
+  //     birthdate: "",
+  //     age: "",
+  //     mail: "",
+  //     usersName: "",
+  //     passWord: "",
+  //   },
+  // ]);
+  // const [page, setPage] = useState(0);
 
-  const addUser = (user, users) => {
-    if (!users.find((userSearch) => userSearch.mail === user.mail)) {
-      setUsers([...users, user]);
-    }
-  };
+  // const addUser = (user, users) => {
+  //   if (!users.find((userSearch) => userSearch.mail === user.mail)) {
+  //     setUsers([...users, user]);
+  //   }
+  // };
+
   // if (name === "Hola") {
   //   setName(name);
   // }
@@ -34,8 +36,9 @@ function App() {
         autoComplete="off"
         // onSubmit={onCreateGentleman}
       ></form> */}
-
-      <form>
+      {<FormData />}
+      {/* {page === 0 ? <FormData /> : page === 1 ? <FormAcces /> : <FormLogin />} */}
+      {/* <form>
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
             Email address
@@ -74,7 +77,7 @@ function App() {
           Submit
         </button>
       </form>
-      {/* </WordsContext.Provider> */}
+      </WordsContext.Provider> */}
     </>
   );
 }
