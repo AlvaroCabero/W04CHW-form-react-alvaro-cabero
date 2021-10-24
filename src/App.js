@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import FormAccess from "./components/FormAccess/FormAccess";
 import FormData from "./components/FormData/FormData";
 import NavBar from "./components/NavBar/NavBar";
 
@@ -16,7 +17,7 @@ function App() {
   //     passWord: "",
   //   },
   // ]);
-  // const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
 
   // const addUser = (user, users) => {
   //   if (!users.find((userSearch) => userSearch.mail === user.mail)) {
@@ -36,7 +37,7 @@ function App() {
         autoComplete="off"
         // onSubmit={onCreateGentleman}
       ></form> */}
-      {<FormData />}
+      {page === 0 ? <FormData /> : page === 1 ? <FormAccess /> : <NavBar />}
       {/* {page === 0 ? <FormData /> : page === 1 ? <FormAcces /> : <FormLogin />} */}
       {/* <form>
         <div className="mb-3">

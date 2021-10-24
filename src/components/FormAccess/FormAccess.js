@@ -1,7 +1,7 @@
 //import { useState } from "react";
 //import "./FormCreate.css";
 
-const FormAccess = ({}) => {
+const FormAccess = () => {
   // const initialData = {
   //   name: "",
   //   picture: "",
@@ -15,7 +15,7 @@ const FormAccess = ({}) => {
       <form>
         <div className="mb-3">
           <label for="exampleInputEmail1" className="form-label">
-            Email address
+            UserName
           </label>
           <input
             type="email"
@@ -24,7 +24,7 @@ const FormAccess = ({}) => {
             aria-describedby="emailHelp"
           ></input>
           <div id="emailHelp" className="form-text">
-            We'll never share your email with anyone else.
+            Choose an userName
           </div>
         </div>
         <div className="mb-3">
