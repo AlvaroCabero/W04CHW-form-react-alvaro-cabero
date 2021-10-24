@@ -2,9 +2,10 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [name, setName] = useState("");
-
-  setName(name + "Hola");
+  // const [name, setName] = useState("");
+  // if (name === "Hola") {
+  //   setName(name);
+  // }
   return (
     <>
       <nav className="nav-bar">
@@ -32,9 +33,7 @@ function App() {
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-          >
-            {name}
-          </input>
+          ></input>
           <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
           </div>
