@@ -1,22 +1,34 @@
 import { useState } from "react";
 import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
-  // const [name, setName] = useState("");
+  const [users, setUsers] = useState([
+    {
+      id: 1,
+      name: "",
+      lastName: "",
+      birthdate: "",
+      age: "",
+      mail: "",
+      usersName: "",
+      passWord: "",
+    },
+  ]);
+  const [page, setPage] = useState(0);
+
+  const addUser = (user, users) => {
+    if (!users.find((userSearch) => userSearch.mail === user.mail)) {
+      setUsers([...users, user]);
+    }
+  };
   // if (name === "Hola") {
   //   setName(name);
   // }
   return (
     <>
-      <nav className="nav-bar">
-        <button className="nav-bar__button1 btn btn-primary btn-lg btn-info">
-          Patrás
-        </button>
-        <button className="nav-bar__button2 btn btn-primary btn-lg btn-info">
-          Palante
-        </button>
-      </nav>
-
+      {/* <userContext.Provider value={{ addUser }}></WordsContext.Provider> */}
+      <NavBar />
       {/* <form
         className="form-initial"
         autoComplete="off"
@@ -62,6 +74,7 @@ function App() {
           Submit
         </button>
       </form>
+      {/* </WordsContext.Provider> */}
     </>
   );
 }
