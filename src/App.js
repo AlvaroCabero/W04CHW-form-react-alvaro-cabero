@@ -19,7 +19,7 @@ function App() {
   //   },
   // ]);
   const [page, setPage] = useState(0);
-  // const [buttonState, setButtonState] = useState([0,1]);
+  const [disabled, setDisabled] = useState(true);
 
   // if (page === 0){
   //   setButtonState([0,1]);
@@ -57,7 +57,12 @@ function App() {
   return (
     <>
       {/* <userContext.Provider value={{ addUser }}></WordsContext.Provider> */}
-      <NavBar page={page} nextPage={nextPage} prevPage={prevPage} />
+      <NavBar
+        page={page}
+        nextPage={nextPage}
+        prevPage={prevPage}
+        disabled={disabled}
+      />
       {/* <form
         className="form-initial"
         autoComplete="off"
