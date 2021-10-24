@@ -4,6 +4,7 @@ import "./App.css";
 function App() {
   const [name, setName] = useState("");
 
+  setName(name + "Hola");
   return (
     <>
       <nav className="nav-bar">
