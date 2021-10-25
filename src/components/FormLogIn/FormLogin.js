@@ -40,13 +40,13 @@ const FormLogin = () => {
             ></input>
           </div>
           <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">
+            <label htmlFor="exampleInputPassword2" className="form-label">
               Repeat Password
             </label>
             <input
               type="password"
               className="form-control"
-              id="exampleInputPassword1"
+              id="exampleInputPassword2"
               required
             ></input>
           </div>
