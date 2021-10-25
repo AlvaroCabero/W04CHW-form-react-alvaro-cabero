@@ -1,20 +1,63 @@
-//import { useState } from "react";
+import { useState } from "react";
 //import "./FormCreate.css";
 
-const FormData = ({ onSubmit }) => {
-  // const initialData = {
-  //   name: "",
-  //   picture: "",
-  //   alternativeText: "",
-  //   profession: "",
-  //   status: "",
-  //   twitter: "",
+const FormData = () => {
+  const [userData, setUserData] = useState({
+    id: 1,
+    name: "",
+    lastName: "",
+    birthdate: "",
+    age: "",
+    mail: "",
+    usersName: "",
+    passWord: "",
+  });
+
+  // const onAddUser = (event) => {
+  //   event.preventDefault();
+  //   addUser(userData, users);
+  // };
 
   return (
-    <>
-      <form>
-        <div className="mb-3">
-          <label for="exampleInputEmail1" className="form-label">
+    <section className="form-container">
+      <form className="row g-3" autoComplete="off">
+        {/* <form className="row g-3" autoComplete="off" onSubmit={onAddUser}> */}
+        <div className="col-md-4">
+          <label htmlFor="validationDefault01" className="form-label">
+            First name
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="validationDefault01"
+            required
+          />
+        </div>
+        <div className="col-md-4">
+          <label htmlFor="validationDefault02" className="form-label">
+            Last name
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="validationDefault02"
+            required
+          />
+        </div>
+
+        <div className="col-md-6">
+          <label htmlFor="validationDefault03" className="form-label">
+            Birthday
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="validationDefault03"
+            required
+          />
+        </div>
+        <div className="col-md-8 mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
             Email address
           </label>
           <input
@@ -22,36 +65,19 @@ const FormData = ({ onSubmit }) => {
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-          ></input>
+          />
           <div id="emailHelp" className="form-text">
             We'll never share your email with anyone else.
           </div>
         </div>
-        <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-          ></input>
+        <div className="col-12">
+          <button className="btn btn-primary" type="submit">
+            {/* <button className="btn btn-primary" type="submit" onClick={addUser}> */}
+            Register Your Data
+          </button>
         </div>
-        <div className="mb-3 form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          ></input>
-          <label className="form-check-label" for="exampleCheck1">
-            Check me out
-          </label>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
       </form>
-    </>
+    </section>
   );
 };
 export default FormData;

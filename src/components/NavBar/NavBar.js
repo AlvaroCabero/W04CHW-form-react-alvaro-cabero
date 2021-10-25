@@ -1,4 +1,4 @@
-const NavBar = ({ page, nextPage, prevPage }) => {
+const NavBar = ({ page, nextPage, prevPage, disabled }) => {
   return (
     <nav className="nav-bar">
       <button
@@ -13,7 +13,9 @@ const NavBar = ({ page, nextPage, prevPage }) => {
         className={`nav-bar__button2 btn btn-outline-primary${
           page === 2 ? " off" : ""
         }`}
+        type="submit"
         onClick={nextPage}
+        disabled={disabled}
       >
         Next
       </button>
