@@ -1,7 +1,7 @@
 import { useState } from "react";
 //import "./FormCreate.css";
 
-const FormData = ({}) => {
+const FormData = () => {
   const [userData, setUserData] = useState({
     id: 1,
     name: "",
