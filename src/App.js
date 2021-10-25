@@ -31,7 +31,7 @@ function App() {
       setPage(page - 1);
     }
   };
-
+  setDisabled(false);
   // useEffect(() => {
   //   setDisabled(
   //     wordData.text === "" ||

@@ -1,17 +1,17 @@
-import { useState } from "react";
+// import { useState } from "react";
 //import "./FormCreate.css";
 
 const FormData = () => {
-  const [userData, setUserData] = useState({
-    id: 1,
-    name: "",
-    lastName: "",
-    birthdate: "",
-    age: "",
-    mail: "",
-    usersName: "",
-    passWord: "",
-  });
+  // const [userData, setUserData] = useState({
+  //   id: 1,
+  //   name: "",
+  //   lastName: "",
+  //   birthdate: "",
+  //   age: "",
+  //   mail: "",
+  //   usersName: "",
+  //   passWord: "",
+  // });
 
   // const onAddUser = (event) => {
   //   event.preventDefault();
