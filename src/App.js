@@ -18,8 +18,8 @@ function App() {
   //   passWord: "",
   // });
   const [page, setPage] = useState(0);
-  const [disabled, setDisabled] = useState(false);
-
+  // const [disabled, setDisabled] = useState(false);
+  const disabled = false;
   const nextPage = () => {
     if (page < 2) {
       setPage(page + 1);
@@ -31,7 +31,7 @@ function App() {
       setPage(page - 1);
     }
   };
-  setDisabled(false);
+
   // useEffect(() => {
   //   setDisabled(
   //     wordData.text === "" ||
