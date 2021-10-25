@@ -17,6 +17,11 @@
   visibility: hidden;
 }
 .nav-bar__text {
-  margin-left: 125px;
+  margin-left: 225px;
   margin-top: 12px;
+}
+.form-container {
+  margin-left: 70px;
+  display: flex;
+  justify-content: center;
 }

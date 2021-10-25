@@ -13,6 +13,7 @@ const NavBar = ({ page, nextPage, prevPage, disabled }) => {
         className={`nav-bar__button2 btn btn-outline-primary${
           page === 2 ? " off" : ""
         }`}
+        type="submit"
         onClick={nextPage}
         disabled={disabled}
       >

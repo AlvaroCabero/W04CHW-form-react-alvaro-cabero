@@ -12,45 +12,48 @@ const FormAccess = () => {
 
   return (
     <>
-      <form>
-        <div className="mb-3">
-          <label for="exampleInputEmail1" className="form-label">
-            UserName
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          ></input>
-          <div id="emailHelp" className="form-text">
-            Choose an userName
+      <section className="form-container">
+        <form>
+          <div className="mb-3">
+            <label htmlFor="exampleInput" className="form-label">
+              UserName
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="exampleInput"
+              required
+            ></input>
+            <div id="emailHelp" className="form-text">
+              Choose an userName
+            </div>
           </div>
-        </div>
-        <div className="mb-3">
-          <label for="exampleInputPassword1" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-          ></input>
-        </div>
-        <div className="mb-3 form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          ></input>
-          <label className="form-check-label" for="exampleCheck1">
-            Check me out
-          </label>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">
+              Password
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              id="exampleInputPassword1"
+              required
+            ></input>
+          </div>
+          <div className="mb-3 form-check">
+            <input
+              type="checkbox"
+              className="form-check-input"
+              id="exampleCheck1"
+            ></input>
+            <label className="form-check-label" htmlFor="exampleCheck1">
+              Remember Password
+            </label>
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </form>
+      </section>
     </>
   );
 };

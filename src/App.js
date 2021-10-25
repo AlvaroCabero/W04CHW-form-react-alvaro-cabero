@@ -6,44 +6,39 @@ import FormLogin from "./components/FormLogIn/FormLogin";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
-  // const [users, setUsers] = useState([
-  //   {
-  //     id: 1,
-  //     name: "",
-  //     lastName: "",
-  //     birthdate: "",
-  //     age: "",
-  //     mail: "",
-  //     usersName: "",
-  //     passWord: "",
-  //   },
-  // ]);
+  // const [users, setUsers] = useState([]);
+  // const [user, setUser] = useState({
+  //   id: 1,
+  //   name: "",
+  //   lastName: "",
+  //   birthdate: "",
+  //   age: "",
+  //   mail: "",
+  //   usersName: "",
+  //   passWord: "",
+  // });
   const [page, setPage] = useState(0);
-  const [disabled, setDisabled] = useState(true);
-
-  // if (page === 0){
-  //   setButtonState([0,1]);
-  // }
-  //   if (page === 1){
-  //   setButtonState([0,1]);
-  // }
-  //   if (page === 2){
-  //   setButtonState([0,1]);
-  // }
+  const [disabled, setDisabled] = useState(false);
 
   const nextPage = () => {
     if (page < 2) {
       setPage(page + 1);
-      console.log(page);
     }
   };
 
   const prevPage = () => {
     if (page > 0) {
       setPage(page - 1);
-      console.log(page);
     }
   };
+
+  // useEffect(() => {
+  //   setDisabled(
+  //     wordData.text === "" ||
+  //       wordData.maxOcurrences === "" ||
+  //       wordData.text.includes(" ")
+  //   );
+  // }, [users]);
 
   // const addUser = (user, users) => {
   //   if (!users.find((userSearch) => userSearch.mail === user.mail)) {
@@ -51,9 +46,6 @@ function App() {
   //   }
   // };
 
-  // if (name === "Hola") {
-  //   setName(name);
-  // }
   return (
     <>
       {/* <userContext.Provider value={{ addUser }}></WordsContext.Provider> */}
@@ -69,7 +61,14 @@ function App() {
         // onSubmit={onCreateGentleman}
       ></form> */}
 
-      {page === 0 ? <FormData /> : page === 1 ? <FormAccess /> : <FormLogin />}
+      {page === 0 ? (
+        <FormData />
+      ) : // <FormData addUser={addUser} />
+      page === 1 ? (
+        <FormAccess />
+      ) : (
+        <FormLogin />
+      )}
     </>
   );
 }
